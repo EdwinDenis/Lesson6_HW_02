@@ -1,0 +1,138 @@
+/* =========Задаются шрифты и убираются отступы============= */
+*{
+    font-family: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
+    margin:0;
+    padding:0;
+    transition: all .1s ease-in;
+    
+}
+/* =========Главный контейнер в котором 
+              все находиться   ============= */
+
+.container{
+    width: 1080px;
+    height: 600px;
+    background:#3B3F45;
+    margin: 0 auto;
+}
+
+/* ========= Шапка страницы ============= */
+
+.header{
+    width: 100%;
+    height: 100px;
+    background:#4A4F56 ;
+    color: #EB7E7F;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header p{
+   font-size: 20px;
+}
+    
+.header h1{
+    margin: 0 0 5px;
+}
+
+/* ========= Выравнивается список по центру ============= */
+
+.list{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+.list > ul{
+    list-style: none;
+}
+
+/* ========= Задаются стили для пунктов списка ============= */
+
+.list > ul > li{
+    background: #88839E;
+    width: 600px;
+    height: 50px;
+    padding: 5px 5px 5px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* ========= Изменяется фон парных и не парных элементов списка ============= */
+
+.list > ul > li:nth-child(odd){
+    background:  #88839E;
+}
+
+.list > ul > li:nth-child(even){
+    background:  #7A6E93;
+}
+
+/* ========= Масштабируется маркер чекбокса ============= */
+
+.list > ul > li [type="checkbox"]{
+    transform:scale(2);
+    margin: 20px;
+    
+}
+
+/* ========= Событие при наведении курсора ============= */
+
+.list > ul > li:hover{
+    background: #625E77;
+    border-bottom: 3px solid #fff; 
+    border-top: 3px solid #fff;   
+}
+
+/* ========= Событие при нажатии и удержании ============= */
+
+.list > ul > li:active{
+    background:#F07427;  
+}
+
+/* ========= Зачеркивается текст ============= */
+
+.list > ul > li input:checked + span{
+    text-decoration: line-through;  
+}
+
+/* ========= Cкобки через псевдоклассы ============= */
+
+#text{
+    font-size: 14px;
+}
+
+#text:before{
+    content:' (';
+}
+
+#text:after{
+    content:' )';
+}
+
+/* ========= Стилизация кнопки ============= */
+
+.btn{
+    margin: 20px auto;
+    width:100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn button{
+    width: 613px;
+    color: #EB7E7F;
+    background: #4A4F56;
+    font-size: 20px;
+}
+
+/* Недоделки:
+
+1. В первом элименте списка не зачеркивается дополнительный текст
+2. Фавикон Чекбокса не выровнян по вериткали с текстом
+3. При нажатии на элемент списка чекбокс не отмечается галочкой */
+
+
+
